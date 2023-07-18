@@ -5,10 +5,10 @@ import (
 	demo "github.com/SchrodingerwithCat/rpcsvr/kitex_gen/demo"
 
 	"errors"
+	"github.com/SchrodingerwithCat/rpcsvr/model"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"strings"
-	"github.com/SchrodingerwithCat/rpcsvr/model"
 )
 
 /////////////////////////////////////////////////////////
@@ -90,7 +90,6 @@ func (s *StudentServiceImpl) Query(ctx context.Context, req *demo.QueryReq) (res
 }
 
 // //////////////////////
-
 
 func student2Model(student *demo.Student) *model.Student {
 	return &model.Student{
